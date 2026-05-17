@@ -570,6 +570,45 @@ protected:
     SbBool processSoEvent(const SoEvent* const ev) override;
 };
 
+class GuiExport SolidOrbitNavigationStyle: public UserNavigationStyle
+{
+    using inherited = UserNavigationStyle;
+
+    TYPESYSTEM_HEADER_WITH_OVERRIDE();
+
+public:
+    SolidOrbitNavigationStyle();
+    ~SolidOrbitNavigationStyle() override;
+    const char* mouseButtons(ViewerMode) override;
+    std::string userFriendlyName() const override;
+
+protected:
+    SbBool processSoEvent(const SoEvent* const ev) override;
+    SbBool processWheelEvent(const SoMouseWheelEvent* const event) override;
+    
+private:
+    SbBool lockButton1 {false};
+
+    // Toggle-based navigation modes (numpad: PAD_0 = orbit, PAD_2 = pan, PAD_1 = selection)
+    enum NavToggleMode { MODE_NONE, MODE_ORBIT, MODE_PAN, MODE_SELECTION };
+    NavToggleMode so_toggleMode {MODE_NONE};
+
+    // === Solid Orbit Pivot ===
+
+    // Dynamic pivot with spatial inertia
+    SbVec3f so_pivot {0.0f, 0.0f, 0.0f};           // Current orbit pivot
+    bool    so_pivotValid {false};                    // Whether pivot is initialized
+
+    // Timing
+    SbTime  so_lastEventTime;
+    bool    so_lastTimeValid {false};
+
+    // Engine methods
+    void  so_updateCursor();
+    void  so_resolvePivot(const SbVec2s& mousePos, float blendAlpha);
+    bool  so_raycast(const SbVec2s& screenPos, SbVec3f& hitPoint);
+};
+
 }  // namespace Gui
 // NOLINTEND(cppcoreguidelines-avoid*, readability-avoid-const-params-in-decls)
 

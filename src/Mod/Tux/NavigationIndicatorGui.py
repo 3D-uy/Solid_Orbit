@@ -584,6 +584,40 @@ def retranslateUi():
     </table>"""
     )
 
+    global t13
+    t13 = (
+        "<p align='center'><b>SolidOrbit</b> "
+        + text06
+        + """</p>
+    <table>
+     <tr>
+      <th><small>"""
+        + text01
+        + """</small></th>
+      <th><small>"""
+        + text02
+        + """</small></th>
+      <th><small>"""
+        + text03
+        + """</small></th>
+      <th><small>"""
+        + text04
+        + """</small></th>
+     </tr>
+     <tr>
+      <td align='center'><img src=':/icons/Navigation_Mouse_Left.svg'></td>
+      <td align='center'><img src=':/icons/Navigation_Mouse_Scroll.svg'></td>
+      <td align='center'><small>Num 0 +</small><br><img src=':/icons/Navigation_Mouse_Left.svg'></td>
+      <td align='center'><img src=':/icons/Navigation_Mouse_Middle.svg'></td>
+     </tr>
+    </table>
+    <b>"""
+        + text08
+        + ":</b> "
+        + text10
+        + "</small></p>"
+    )
+
     global t12
     t12 = (
         "<p align='center'><b>Touchpad</b> "
@@ -780,6 +814,11 @@ a12.setText("Touchpad  ")
 a12.setData("Gui::TouchpadNavigationStyle")
 a12.setObjectName("Indicator_NavigationTouchpad")
 
+a13 = QtGui.QAction(gStyle)
+a13.setText("SolidOrbit  ")
+a13.setData("Gui::SolidOrbitNavigationStyle")
+a13.setObjectName("Indicator_NavigationSolidOrbit")
+
 RePopulateIcons()
 
 menu.addMenu(menuSettings)
@@ -795,6 +834,7 @@ menu.addAction(a7)
 menu.addAction(a8)
 menu.addAction(a9)
 menu.addAction(a10)
+menu.addAction(a13)
 menu.addAction(a11)
 menu.addAction(a12)
 
@@ -837,6 +877,7 @@ def onTooltip():
         a8.setToolTip(t8)
         a9.setToolTip(t9)
         a10.setToolTip(t10)
+        a13.setToolTip(t13)
         a11.setToolTip(t11)
         a12.setToolTip(t12)
         p.SetBool("Tooltip", 1)

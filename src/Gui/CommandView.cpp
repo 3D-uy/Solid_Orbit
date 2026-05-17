@@ -1450,7 +1450,6 @@ StdCmdViewBottom::StdCmdViewBottom()
     sWhatsThis = "Std_ViewBottom";
     sStatusTip = sToolTipText;
     sPixmap = "view-bottom";
-    sAccel = "5";
     eType = Alter3DView;
 }
 
@@ -1479,7 +1478,6 @@ StdCmdViewFront::StdCmdViewFront()
     sWhatsThis = "Std_ViewFront";
     sStatusTip = sToolTipText;
     sPixmap = "view-front";
-    sAccel = "1";
     eType = Alter3DView;
 }
 
@@ -1508,7 +1506,6 @@ StdCmdViewLeft::StdCmdViewLeft()
     sWhatsThis = "Std_ViewLeft";
     sStatusTip = sToolTipText;
     sPixmap = "view-left";
-    sAccel = "6";
     eType = Alter3DView;
 }
 
@@ -1537,7 +1534,6 @@ StdCmdViewRear::StdCmdViewRear()
     sWhatsThis = "Std_ViewRear";
     sStatusTip = sToolTipText;
     sPixmap = "view-rear";
-    sAccel = "4";
     eType = Alter3DView;
 }
 
@@ -1566,7 +1562,6 @@ StdCmdViewRight::StdCmdViewRight()
     sWhatsThis = "Std_ViewRight";
     sStatusTip = sToolTipText;
     sPixmap = "view-right";
-    sAccel = "3";
     eType = Alter3DView;
 }
 
@@ -1595,7 +1590,6 @@ StdCmdViewTop::StdCmdViewTop()
     sWhatsThis = "Std_ViewTop";
     sStatusTip = sToolTipText;
     sPixmap = "view-top";
-    sAccel = "2";
     eType = Alter3DView;
 }
 
@@ -1625,7 +1619,6 @@ StdCmdViewIsometric::StdCmdViewIsometric()
     sWhatsThis = "Std_ViewIsometric";
     sStatusTip = sToolTipText;
     sPixmap = "view-axonometric";
-    sAccel = "0";
     eType = Alter3DView;
 }
 

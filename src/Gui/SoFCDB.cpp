@@ -59,6 +59,7 @@
 #include "Navigation/GestureNavigationStyle.h"
 #include "Navigation/NavigationStyle.h"
 #include "Navigation/SiemensNXNavigationStyle.h"
+#include "Navigation/SolidOrbitNavigationStyle.h"
 #include "SelectionObject.h"
 #include "SoDevicePixelRatioElement.h"
 #include "SoFCColorBar.h"
@@ -219,9 +220,10 @@ void Gui::SoFCDB::init()
     OpenSCADNavigationStyle ::init();
     RevitNavigationStyle ::init();
     SiemensNXNavigationStyle ::init();
-    SolidWorksNavigationStyle ::init();
-    TinkerCADNavigationStyle ::init();
-    TouchpadNavigationStyle ::init();
+    SolidOrbitNavigationStyle    ::init();
+    SolidWorksNavigationStyle    ::init();
+    TinkerCADNavigationStyle     ::init();
+    TouchpadNavigationStyle      ::init();
 
     GLGraphicsItem ::init();
     GLFlagWindow ::init();

@@ -931,6 +931,7 @@ SET(Navigation_CPP_SRCS
     Navigation/RevitNavigationStyle.cpp
     Navigation/BlenderNavigationStyle.cpp
     Navigation/SiemensNXNavigationStyle.cpp
+    Navigation/SolidOrbitNavigationStyle.cpp
     Navigation/SolidWorksNavigationStyle.cpp
     Navigation/MayaGestureNavigationStyle.cpp
     Navigation/OpenCascadeNavigationStyle.cpp
@@ -950,6 +951,7 @@ SET(Navigation_SRCS
     Navigation/NavigationAnimator.h
     Navigation/NavigationAnimation.h
     Navigation/SiemensNXNavigationStyle.h
+    Navigation/SolidOrbitNavigationStyle.h
 )
 SOURCE_GROUP("Navigation" FILES ${Navigation_SRCS})
 

@@ -234,6 +234,7 @@ public:
 
     void setViewing(bool enable) override;
     virtual void setCursorEnabled(bool enable);
+    void setCursorRepresentation(int mode);
 
     void addGraphicsItem(GLGraphicsItem*);
     void removeGraphicsItem(GLGraphicsItem*);
@@ -593,7 +594,6 @@ private:
     void drawAxisCross();
     static void drawArrow();
     static void drawSingleBackground(const QColor&);
-    void setCursorRepresentation(int mode);
     void aboutToDestroyGLContext();
     void createStandardCursors();
 
